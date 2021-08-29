@@ -43,26 +43,27 @@
 .content {
   display: flex;
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 .nav {
   min-width: 150px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .nav-entry {
   cursor: pointer;
+  margin-bottom: 0.5em;
+  color: #5a5a5a;
 }
 
-.text {
-  width: 450px;
+.nav-entry:hover, .nav-entry.active {
+  color: black;
 }
 
-.chinese {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 1.5em;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-  line-height: 175%;
-  letter-spacing: 0.1em;
+.title {
+  margin: 0;
+  line-height: normal;
+  margin-bottom: 15px;
 }

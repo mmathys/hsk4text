@@ -1,71 +1,74 @@
-import React, { useEffect, useRef, useState } from "react"
-import logo from "./logo.svg"
-import "./App.css"
-import { Text } from "./Text"
-import { title } from "process"
+import React, { useEffect, useRef, useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Text } from "./Text";
+import { title } from "process";
 
 export type TextConfig = {
-  lesson: number
-  text: number
-  title: string
-}
+  lesson: number;
+  text: number;
+  title: string;
+};
 
 type Config = {
-  texts: [TextConfig]
-}
+  texts: [TextConfig];
+};
 
 export function getKey(config: TextConfig) {
-  return (config.lesson < 10 ? "0" : "") + config.lesson + "-" + config.text
+  return (config.lesson < 10 ? "0" : "") + config.lesson + "-" + config.text;
 }
 
 function App() {
-  const [config, setConfig] = useState<Config>()
-  const [activeText, setActiveText] = useState<TextConfig>()
+  const [config, setConfig] = useState<Config>();
+  const [activeText, setActiveText] = useState<TextConfig>();
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("config.json")
-      const json: Config = await res.json()
-      setConfig(json)
-    }
+      const res = await fetch("config.json");
+      const json: Config = await res.json();
+      setConfig(json);
+    };
 
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
   const setText = (entry: TextConfig) => {
-    console.log(entry)
-    setActiveText(entry)
-  }
+    console.log(entry);
+    setActiveText(entry);
+  };
 
   const nav = () => {
     if (config) {
-      return config.texts.map((entry) => (
-        <div className="nav-entry" key={getKey(entry)} onClick={() => setText(entry)}>
-          Lesson {entry.lesson}, Text {entry.text}
-        </div>
-      ))
+      return config.texts.map((entry) => {
+        const className = "nav-entry " + (entry === activeText ? "active" : "")
+        return (
+          <div
+            className={className}
+            key={getKey(entry)}
+            onClick={() => setText(entry)}
+          >
+            Lesson {entry.lesson}, Text {entry.text}
+          </div>
+        );
+      });
     }
-  }
+  };
 
   const text = () => {
-    if (activeText) {
-      return <Text config={activeText}></Text>
-    } else {
-      return "no text"
-    }
-  }
+    if (activeText) return <Text config={activeText}></Text>;
+  };
 
   return (
     <div className="App">
       <div className="content">
         <div className="nav">{nav()}</div>
         <div className="text chinese">
-          {activeText?.title}
+          <p className="title">{activeText?.title || "no text"}</p>
           {text()}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
