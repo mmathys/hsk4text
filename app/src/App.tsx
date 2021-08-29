@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import logo from "./logo.svg"
 import "./App.css"
 import { Text } from "./Text"
+import { title } from "process"
 
 export type TextConfig = {
   lesson: number
@@ -58,7 +59,8 @@ function App() {
     <div className="App">
       <div className="content">
         <div className="nav">{nav()}</div>
-        <div className="text">
+        <div className="text chinese">
+          {activeText?.title}
           {text()}
         </div>
       </div>
