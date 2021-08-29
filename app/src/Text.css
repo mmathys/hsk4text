@@ -1,28 +1,33 @@
 .table {
-    display: table;
+  display: table;
+  margin-top: -0.3em;
 }
 
 .row {
-    display: table-row;
+  display: table-row;
 }
 
 .cell {
-    display: table-cell;
-    padding: 0.2em 0;
+  display: table-cell;
+  padding: 0.0 0 0.2em 0;
+}
+
+.table:first-child > .row:first-child {
+  /*transform: translateY(-0.5em);*/
 }
 
 .dialog-head {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .chinese {
-    /*font-family: 'Noto Serif SC', serif; */
-    font-family: 'PingFang SC', serif;
-    font-size: 1.5em;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 400;
-    line-height: 175%;
-    letter-spacing: 0.1em;
-    white-space: pre-wrap;
-    line-break: auto;
-  }
+  /*font-family: 'Noto Serif SC', serif; */
+  font-family: "PingFang SC", serif;
+  font-size: 1.5em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 175%;
+  letter-spacing: 0.1em;
+  white-space: pre-wrap;
+  line-break: auto;
+}

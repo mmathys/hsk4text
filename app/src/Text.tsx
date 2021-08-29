@@ -6,6 +6,16 @@ type TextProps = {
   config: TextConfig;
 };
 
+const shouldUsePrefix = (lines: string[]) => {
+  const validLine = lines.map((l) => {
+    const arr = l.split("：");
+    if (arr[0].length <= 4) return true;
+    else return false;
+  });
+
+  return validLine.reduce((p, n) => p && n);
+};
+
 export function Text(props: TextProps) {
   const [text, setText] = useState<string[][]>();
 
@@ -25,8 +35,13 @@ export function Text(props: TextProps) {
       const res = await fetch(`text/${key}.txt`);
       const text = await res.text();
       const lines = text.split("\n");
-      const prefixed = lines.map(splitFirst);
-      setText(prefixed);
+      if (shouldUsePrefix(lines)) {
+        const prefixed = lines.map(splitFirst);
+        setText(prefixed);
+      } else {
+        const unprefixed = lines.map((l) => ["", l]);
+        setText(unprefixed);
+      }
     };
 
     fetchText();
