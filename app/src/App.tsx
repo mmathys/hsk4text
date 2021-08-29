@@ -59,22 +59,26 @@ function App() {
     }
   };
 
-  const text = () => {
-    if (activeText) return <Text config={activeText}></Text>;
+  const content = () => {
+    if (activeText) {
+      return (
+        <div className="text chinese">
+          <p className="title">{activeText.title}</p>
+          <Text config={activeText}></Text>
+          <audio className="audio" controls ref={audioRef}>
+            <source src={`audio/${getKey(activeText)}.mp3`} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      );
+    }
   };
 
   return (
     <div className="App">
       <div className="content">
         <div className="nav">{nav()}</div>
-        <div className="text chinese">
-          <p className="title">{activeText?.title || "no text"}</p>
-          {text()}
-          <audio controls ref={audioRef}>
-            <source src={`audio/${getKey(activeText)}.mp3`} type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
+        {content()}
       </div>
     </div>
   );
