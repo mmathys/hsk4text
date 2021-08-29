@@ -7,7 +7,7 @@ import { title } from "process";
 export type TextConfig = {
   lesson: number;
   text: number;
-  title: string;
+  title: string | undefined;
 };
 
 type Config = {
@@ -61,9 +61,10 @@ function App() {
 
   const content = () => {
     if (activeText) {
+      const title = () => activeText.title && <p className="title">{activeText.title}</p>
       return (
         <div className="text chinese">
-          <p className="title">{activeText.title}</p>
+          {title}
           <Text config={activeText}></Text>
           <audio className="audio" controls ref={audioRef}>
             <source src={`audio/${getKey(activeText)}.mp3`} type="audio/mpeg" />
