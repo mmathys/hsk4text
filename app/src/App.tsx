@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import logo from "./logo.svg"
-import { Text } from "./Text"
 import "./App.css"
+import { Text } from "./Text"
 
 export type TextConfig = {
   lesson: number
@@ -13,8 +13,13 @@ type Config = {
   texts: [TextConfig]
 }
 
+export function getKey(config: TextConfig) {
+  return (config.lesson < 10 ? "0" : "") + config.lesson + "-" + config.text
+}
+
 function App() {
   const [config, setConfig] = useState<Config>()
+  const [activeText, setActiveText] = useState<TextConfig>()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,13 +31,39 @@ function App() {
     fetchData()
   }, [])
 
-  const text = () => {
+  const setText = (entry: TextConfig) => {
+    console.log(entry)
+    setActiveText(entry)
+  }
+
+  const nav = () => {
     if (config) {
-      return config.texts.map((entry) => <Text config={entry}></Text>)
+      return config.texts.map((entry) => (
+        <div className="nav-entry" key={getKey(entry)} onClick={() => setText(entry)}>
+          Lesson {entry.lesson}, Text {entry.text}
+        </div>
+      ))
     }
   }
 
-  return <div className="App">{text()}</div>
+  const text = () => {
+    if (activeText) {
+      return <Text config={activeText}></Text>
+    } else {
+      return "no text"
+    }
+  }
+
+  return (
+    <div className="App">
+      <div className="content">
+        <div className="nav">{nav()}</div>
+        <div className="text">
+          {text()}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default App
