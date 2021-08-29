@@ -22,6 +22,98 @@
     {
       "lesson": 1,
       "text": 5
+    },
+    {
+      "lesson": 2,
+      "text": 1,
+      "title": "小夏和马克聊马克的中国朋友"
+    },
+    {
+      "lesson": 2,
+      "text": 2,
+      "title": "小李和小林聊同学聚会的事情"
+    },
+    {
+      "lesson": 2,
+      "text": 3,
+      "title": "孙月和王静聊她们的朋友"
+    },
+    {
+      "lesson": 2,
+      "text": 4
+    },
+    {
+      "lesson": 2,
+      "text": 5
+    },
+    {
+      "lesson": 3,
+      "text": 1,
+      "title": "小夏和小雨聊小雨面试的情况"
+    },
+    {
+      "lesson": 3,
+      "text": 2,
+      "title": "马经理和小林聊招聘的事情"
+    },
+    {
+      "lesson": 3,
+      "text": 3,
+      "title": "小林和王静聊王静的工作情况"
+    },
+    {
+      "lesson": 3,
+      "text": 4
+    },
+    {
+      "lesson": 3,
+      "text": 5
+    },
+    {
+      "lesson": 4,
+      "text": 1,
+      "title": "小林和小李聊小李的工作"
+    },
+    {
+      "lesson": 4,
+      "text": 2,
+      "title": "主经理和小李在说工作"
+    },
+    {
+      "lesson": 4,
+      "text": 3,
+      "title": "王经理和马经理在说工作"
+    },
+    {
+      "lesson": 4,
+      "text": 4
+    },
+    {
+      "lesson": 4,
+      "text": 5
+    },
+    {
+      "lesson": 5,
+      "text": 1,
+      "title": "王静在家具店买沙发"
+    },
+    {
+      "lesson": 5,
+      "text": 2,
+      "title": "王静和李进在商场买东西"
+    },
+    {
+      "lesson": 5,
+      "text": 3,
+      "title": "李进和王静在超市买礼物"
+    },
+    {
+      "lesson": 5,
+      "text": 4
+    },
+    {
+      "lesson": 5,
+      "text": 5
     }
   ]
 }
