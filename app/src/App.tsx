@@ -14,13 +14,15 @@ type Config = {
   texts: [TextConfig];
 };
 
-export function getKey(config: TextConfig) {
+export function getKey(config: TextConfig | undefined) {
+  if (!config) return;
   return (config.lesson < 10 ? "0" : "") + config.lesson + "-" + config.text;
 }
 
 function App() {
   const [config, setConfig] = useState<Config>();
   const [activeText, setActiveText] = useState<TextConfig>();
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,12 +37,15 @@ function App() {
   const setText = (entry: TextConfig) => {
     console.log(entry);
     setActiveText(entry);
+    if (audioRef.current) {
+      audioRef.current.load();
+    }
   };
 
   const nav = () => {
     if (config) {
       return config.texts.map((entry) => {
-        const className = "nav-entry " + (entry === activeText ? "active" : "")
+        const className = "nav-entry " + (entry === activeText ? "active" : "");
         return (
           <div
             className={className}
@@ -65,6 +70,10 @@ function App() {
         <div className="text chinese">
           <p className="title">{activeText?.title || "no text"}</p>
           {text()}
+          <audio controls ref={audioRef}>
+            <source src={`audio/${getKey(activeText)}.mp3`} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </div>
     </div>
