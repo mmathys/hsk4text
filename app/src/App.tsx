@@ -3,11 +3,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Text } from "./Text";
 import { title } from "process";
+import _ from "lodash";
 
 export type TextConfig = {
   lesson: number;
   text: number;
-  title: string | undefined;
+  title: string | undefined;
 };
 
 type Config = {
@@ -22,6 +23,7 @@ export function getKey(config: TextConfig | undefined) {
 function App() {
   const [config, setConfig] = useState<Config>();
   const [activeText, setActiveText] = useState<TextConfig>();
+  const [selectedLesson, setSelectedLesson] = useState<number>(-1);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -44,16 +46,41 @@ function App() {
 
   const nav = () => {
     if (config) {
-      const lessons = config.texts.map(t => t.lesson).filter((value, index, self) => self.indexOf(value) === index)
-      return config.texts.map((entry) => {
-        const className = "nav-entry " + (entry === activeText ? "active" : "");
+      const grouped = _.groupBy(config.texts, (c: TextConfig) => c.lesson);
+      const keys = _.keys(grouped);
+      return keys.map((lesson: string) => {
+        const lesson_num = parseInt(lesson);
+        const entries = grouped[lesson];
+        const subitems = () => {
+          if (lesson_num === selectedLesson) {
+            return entries.map((entry) => {
+              const className =
+                "nav-entry " + (entry === activeText ? "active" : "");
+              return (
+                <div
+                  className={className}
+                  key={getKey(entry)}
+                  onClick={() => setText(entry)}
+                >
+                  Text {entry.text}
+                </div>
+              );
+            });
+          }
+        };
+
+        const className =
+          "nav-entry " +
+          (lesson_num === activeText?.lesson ? "active" : "");
         return (
-          <div
-            className={className}
-            key={getKey(entry)}
-            onClick={() => setText(entry)}
-          >
-            Lesson {entry.lesson}, Text {entry.text}
+          <div>
+            <span
+              className={className}
+              onClick={() => setSelectedLesson(lesson_num)}
+            >
+              Lesson {lesson}
+            </span>
+            {subitems()}
           </div>
         );
       });
@@ -62,7 +89,8 @@ function App() {
 
   const content = () => {
     if (activeText) {
-      const title = () => activeText.title && <p className="title">{activeText.title}</p>
+      const title = () =>
+        activeText.title && <p className="title">{activeText.title}</p>;
       return (
         <div className="text chinese">
           {title()}
