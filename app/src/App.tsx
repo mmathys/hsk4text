@@ -44,6 +44,7 @@ function App() {
 
   const nav = () => {
     if (config) {
+      const lessons = config.texts.map(t => t.lesson).filter((value, index, self) => self.indexOf(value) === index)
       return config.texts.map((entry) => {
         const className = "nav-entry " + (entry === activeText ? "active" : "");
         return (
