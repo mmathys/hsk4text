@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/hsk4text/build/static/css/main.091b523c.chunk.css",
-    "main.js": "/hsk4text/build/static/js/main.b80da9a0.chunk.js",
-    "main.js.map": "/hsk4text/build/static/js/main.b80da9a0.chunk.js.map",
-    "runtime-main.js": "/hsk4text/build/static/js/runtime-main.56a03897.js",
-    "runtime-main.js.map": "/hsk4text/build/static/js/runtime-main.56a03897.js.map",
-    "static/js/2.eda35926.chunk.js": "/hsk4text/build/static/js/2.eda35926.chunk.js",
-    "static/js/2.eda35926.chunk.js.map": "/hsk4text/build/static/js/2.eda35926.chunk.js.map",
-    "static/js/3.e40c4e90.chunk.js": "/hsk4text/build/static/js/3.e40c4e90.chunk.js",
-    "static/js/3.e40c4e90.chunk.js.map": "/hsk4text/build/static/js/3.e40c4e90.chunk.js.map",
-    "index.html": "/hsk4text/build/index.html",
-    "static/css/main.091b523c.chunk.css.map": "/hsk4text/build/static/css/main.091b523c.chunk.css.map",
-    "static/js/2.eda35926.chunk.js.LICENSE.txt": "/hsk4text/build/static/js/2.eda35926.chunk.js.LICENSE.txt"
+    "main.css": "https://max.ax/hsk4text/build/static/css/main.5d199986.chunk.css",
+    "main.js": "https://max.ax/hsk4text/build/static/js/main.833f7a01.chunk.js",
+    "main.js.map": "https://max.ax/hsk4text/build/static/js/main.833f7a01.chunk.js.map",
+    "runtime-main.js": "https://max.ax/hsk4text/build/static/js/runtime-main.f8459bef.js",
+    "runtime-main.js.map": "https://max.ax/hsk4text/build/static/js/runtime-main.f8459bef.js.map",
+    "static/js/2.0e488ded.chunk.js": "https://max.ax/hsk4text/build/static/js/2.0e488ded.chunk.js",
+    "static/js/2.0e488ded.chunk.js.map": "https://max.ax/hsk4text/build/static/js/2.0e488ded.chunk.js.map",
+    "static/js/3.79cec5e1.chunk.js": "https://max.ax/hsk4text/build/static/js/3.79cec5e1.chunk.js",
+    "static/js/3.79cec5e1.chunk.js.map": "https://max.ax/hsk4text/build/static/js/3.79cec5e1.chunk.js.map",
+    "index.html": "https://max.ax/hsk4text/build/index.html",
+    "static/css/main.5d199986.chunk.css.map": "https://max.ax/hsk4text/build/static/css/main.5d199986.chunk.css.map",
+    "static/js/2.0e488ded.chunk.js.LICENSE.txt": "https://max.ax/hsk4text/build/static/js/2.0e488ded.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.56a03897.js",
-    "static/js/2.eda35926.chunk.js",
-    "static/css/main.091b523c.chunk.css",
-    "static/js/main.b80da9a0.chunk.js"
+    "static/js/runtime-main.f8459bef.js",
+    "static/js/2.0e488ded.chunk.js",
+    "static/css/main.5d199986.chunk.css",
+    "static/js/main.833f7a01.chunk.js"
   ]
 }

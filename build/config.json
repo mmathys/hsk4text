@@ -114,6 +114,351 @@
     {
       "lesson": 5,
       "text": 5
+    },
+    {
+      "lesson": 6,
+      "text": 1,
+      "title": "张远和李进聊李进昨晚的购物经历"
+    },
+    {
+      "lesson": 6,
+      "text": 2,
+      "title": "王静在商店买西红柿"
+    },
+    {
+      "lesson": 6,
+      "text": 3,
+      "title": "李进在商场买行李箱"
+    },
+    {
+      "lesson": 6,
+      "text": 4
+    },
+    {
+      "lesson": 6,
+      "text": 5
+    },
+    {
+      "lesson": 7,
+      "text": 1,
+      "title": "小李和小林聊天气和身体情况"
+    },
+    {
+      "lesson": 7,
+      "text": 2,
+      "title": "小夏和小雨聊小雨抽烟的事情"
+    },
+    {
+      "lesson": 7,
+      "text": 3,
+      "title": "小李和小林聊电脑对身体的影响"
+    },
+    {
+      "lesson": 7,
+      "text": 4
+    },
+    {
+      "lesson": 7,
+      "text": 5
+    },
+    {
+      "lesson": 8,
+      "text": 1,
+      "title": "李老师和高老师聊关于巧克力的事情"
+    },
+    {
+      "lesson": 8,
+      "text": 2,
+      "title": "小夏和马克聊关千上次足球比赛的事情"
+    },
+    {
+      "lesson": 8,
+      "text": 3,
+      "title": "马克和司机聊关于堵车的事情"
+    },
+    {
+      "lesson": 8,
+      "text": 4
+    },
+    {
+      "lesson": 8,
+      "text": 5
+    },
+    {
+      "lesson": 9,
+      "text": 1,
+      "title": "王静和孙月聊孙月减肥的事情"
+    },
+    {
+      "lesson": 9,
+      "text": 2,
+      "title": "李进和张远聊张远的成功经历"
+    },
+    {
+      "lesson": 9,
+      "text": 3,
+      "title": "小林和小李谈王红的成功经历"
+    },
+    {
+      "lesson": 9,
+      "text": 4
+    },
+    {
+      "lesson": 9,
+      "text": 5
+    },
+    {
+      "lesson": 10,
+      "text": 1,
+      "title": "孙月和王静聊王静的生活情况"
+    },
+    {
+      "lesson": 10,
+      "text": 2,
+      "title": "高老师和李老师在谈幸福"
+    },
+    {
+      "lesson": 10,
+      "text": 3,
+      "title": "小雨和小夏聊找工作的事情"
+    },
+    {
+      "lesson": 10,
+      "text": 4
+    },
+    {
+      "lesson": 10,
+      "text": 5
+    },
+    {
+      "lesson": 11,
+      "text": 1,
+      "title": "吗克介绍自己学习汉语的方法"
+    },
+    {
+      "lesson": 11,
+      "text": 2,
+      "title": "小夏和小雨聊考试的情况"
+    },
+    {
+      "lesson": 11,
+      "text": 3,
+      "title": "小李告诉小林阅读的好处"
+    },
+    {
+      "lesson": 11,
+      "text": 4
+    },
+    {
+      "lesson": 11,
+      "text": 5
+    },
+    {
+      "lesson": 12,
+      "text": 1,
+      "title": "王经理做生意遇到了困难"
+    },
+    {
+      "lesson": 12,
+      "text": 2,
+      "title": "高老师告诉女儿洗衣服的方法"
+    },
+    {
+      "lesson": 12,
+      "text": 3,
+      "title": "高老师学习王教授的教育方法"
+    },
+    {
+      "lesson": 12,
+      "text": 4
+    },
+    {
+      "lesson": 12,
+      "text": 5
+    },
+    {
+      "lesson": 13,
+      "text": 1,
+      "title": "小雨和小夏在聊小夏的爷爷表演京剧的情况"
+    },
+    {
+      "lesson": 13,
+      "text": 2,
+      "title": "小雨和马克在聊京剧"
+    },
+    {
+      "lesson": 13,
+      "text": 3,
+      "title": "李老师和校长在谈工作"
+    },
+    {
+      "lesson": 13,
+      "text": 4
+    },
+    {
+      "lesson": 13,
+      "text": 5
+    },
+    {
+      "lesson": 14,
+      "text": 1,
+      "title": "李进要出差，王静和李进在聊天儿"
+    },
+    {
+      "lesson": 14,
+      "text": 2,
+      "title": "经理和服务员在谈工作"
+    },
+    {
+      "lesson": 14,
+      "text": 3,
+      "title": "孙月和王静在聊关于环保的事情"
+    },
+    {
+      "lesson": 14,
+      "text": 4
+    },
+    {
+      "lesson": 14,
+      "text": 5
+    },
+    {
+      "lesson": 15,
+      "text": 1,
+      "title": "李老师建议王静让孩子养成好习惯"
+    },
+    {
+      "lesson": 15,
+      "text": 2,
+      "title": "王静建议孙月教育孩子学会安排时间"
+    },
+    {
+      "lesson": 15,
+      "text": 3,
+      "title": "王静和孙月讨论表扬孩子的方法"
+    },
+    {
+      "lesson": 15,
+      "text": 4
+    },
+    {
+      "lesson": 15,
+      "text": 5
+    },
+    {
+      "lesson": 16,
+      "text": 1,
+      "title": "小夏出国留学遇到了问题"
+    },
+    {
+      "lesson": 16,
+      "text": 2,
+      "title": "王老板告诉李进自己成功的经验"
+    },
+    {
+      "lesson": 16,
+      "text": 3,
+      "title": "小林不好意思拒绝朋友"
+    },
+    {
+      "lesson": 16,
+      "text": 4
+    },
+    {
+      "lesson": 16,
+      "text": 5
+    },
+    {
+      "lesson": 17,
+      "text": 1,
+      "title": "小夏和安娜在聊天气"
+    },
+    {
+      "lesson": 17,
+      "text": 2,
+      "title": "小林和小李在聊小李的狗"
+    },
+    {
+      "lesson": 17,
+      "text": 3,
+      "title": "马克和小夏在聊动物"
+    },
+    {
+      "lesson": 17,
+      "text": 4
+    },
+    {
+      "lesson": 17,
+      "text": 5
+    },
+    {
+      "lesson": 18,
+      "text": 1,
+      "title": "王静给孙月推荐一本书"
+    },
+    {
+      "lesson": 18,
+      "text": 2,
+      "title": "李老师和高老师在聊电脑和互联网技术的发展"
+    },
+    {
+      "lesson": 18,
+      "text": 3,
+      "title": "王静和孙月在聊关于梦的情况"
+    },
+    {
+      "lesson": 18,
+      "text": 4
+    },
+    {
+      "lesson": 18,
+      "text": 5
+    },
+    {
+      "lesson": 19,
+      "text": 1,
+      "title": "马克申请下个学期继续在学校学习"
+    },
+    {
+      "lesson": 19,
+      "text": 2,
+      "title": "王静做饺子时手受伤了"
+    },
+    {
+      "lesson": 19,
+      "text": 3,
+      "title": "安娜帮助马克练习舞蹈动作"
+    },
+    {
+      "lesson": 19,
+      "text": 4
+    },
+    {
+      "lesson": 19,
+      "text": 5
+    },
+    {
+      "lesson": 20,
+      "text": 1,
+      "title": "小张去北京，朋友送小张去机场"
+    },
+    {
+      "lesson": 20,
+      "text": 2,
+      "title": "孙月和丈夫计划放寒假带女儿去旅行"
+    },
+    {
+      "lesson": 20,
+      "text": 3,
+      "title": "安娜向马克介绍去丽江旅行的经验"
+    },
+    {
+      "lesson": 20,
+      "text": 4
+    },
+    {
+      "lesson": 20,
+      "text": 5
     }
   ]
 }
