@@ -55,7 +55,7 @@ function App() {
           if (lesson_num === selectedLesson) {
             return entries.map((entry) => {
               const className =
-                "nav-entry " + (entry === activeText ? "active" : "");
+                "nav-entry" + (entry === activeText ? " active" : "");
               return (
                 <div
                   className={className}
@@ -70,16 +70,22 @@ function App() {
         };
 
         const className =
-          "nav-entry " +
-          (lesson_num === activeText?.lesson ? "active" : "");
+          "nav-lesson" +
+          (lesson_num === activeText?.lesson ? " active" : "");
         return (
           <div>
-            <span
+            <p
               className={className}
-              onClick={() => setSelectedLesson(lesson_num)}
+              onClick={() => {
+                if(lesson_num === selectedLesson) {
+                  setSelectedLesson(-1)
+                } else {
+                  setSelectedLesson(lesson_num)
+                }
+              }}
             >
               Lesson {lesson}
-            </span>
+            </p>
             {subitems()}
           </div>
         );
