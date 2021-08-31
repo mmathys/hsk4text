@@ -154,7 +154,7 @@ function App() {
     }
 
     if (newText) {
-      setActiveText(newText)
+      setText(newText)
       setSelectedLesson(newText.lesson)
     }
   }, [up, down, config])
