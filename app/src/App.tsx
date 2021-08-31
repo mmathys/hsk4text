@@ -7,6 +7,8 @@ import _ from "lodash"
 const PauseKeys = ["k", " "]
 const SkipLeftKeys = ["j", "ArrowLeft"]
 const SkipRightKeys = ["l", "ArrowRight"]
+const UpKeys = ["ArrowUp", "i"]
+const DownKeys = ["ArrowDown", "m"]
 
 export type TextConfig = {
   lesson: number
@@ -102,22 +104,60 @@ function App() {
     )
   }
 
-  useKeyPress((event) => {
-    if (event.type !== "keydown") return false
-    if (PauseKeys.includes(event.key)) {
+  const keyHandler = (keys: string[]) => (event: KeyboardEvent) => {
+    if (keys.includes(event.key)) {
+      event.preventDefault()
+      return true
+    }
+    return false
+  }
+
+  const [pause] = useKeyPress(keyHandler(PauseKeys))
+  const [left] = useKeyPress(keyHandler(SkipLeftKeys))
+  const [right] = useKeyPress(keyHandler(SkipRightKeys))
+  const [up] = useKeyPress(keyHandler(UpKeys))
+  const [down] = useKeyPress(keyHandler(DownKeys))
+
+  useEffect(() => {
+    if (pause) {
       if (audioRef.current?.paused) audioRef.current?.play()
       else audioRef.current?.pause()
-      event.preventDefault()
+    }
+  }, [pause])
+
+  useEffect(() => {
+    if (!audioRef.current) return
+    if (left) audioRef.current.currentTime -= 5
+    if (right) audioRef.current.currentTime += 5
+  }, [left, right, audioRef])
+
+  useEffect(() => {
+    if (!config) return
+    const numLessons = config.texts.length
+    const lesson = activeText && config.texts.indexOf(activeText)
+
+    let newText
+    if (down) {
+      if (lesson !== undefined) {
+        newText = config.texts[lesson + 1]
+      } else {
+        newText = config.texts[0]
+      }
     }
 
-    if (audioRef.current) {
-      if (SkipLeftKeys.includes(event.key)) audioRef.current.currentTime -= 5
-      if (SkipRightKeys.includes(event.key)) audioRef.current.currentTime += 5
-      event.preventDefault()
+    if (up) {
+      if (lesson !== undefined) {
+        newText = config.texts[lesson - 1]
+      } else {
+        newText = config.texts[numLessons - 1]
+      }
     }
 
-    return true
-  })
+    if (newText) {
+      setActiveText(newText)
+      setSelectedLesson(newText.lesson)
+    }
+  }, [up, down, config])
 
   return (
     <div className="App">
