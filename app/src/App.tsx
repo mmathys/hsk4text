@@ -1,9 +1,12 @@
-import React, { useEffect, useRef, useState } from "react"
-import logo from "./logo.svg"
+import { useEffect, useRef, useState } from "react"
+import { useKeyPress } from "react-use"
 import "./App.css"
 import { Text } from "./Text"
-import { title } from "process"
 import _ from "lodash"
+
+const PauseKeys = ["k", "space"]
+const SkipLeftKeys = ["j", "left"]
+const SkipRightKeys = ["l", "right"]
 
 export type TextConfig = {
   lesson: number
@@ -71,7 +74,7 @@ function App() {
       const entries = grouped[lesson]
       const className = "nav-lesson" + (lesson_num === activeText?.lesson ? " active" : "")
       return (
-        <div>
+        <div key={lesson}>
           <p className={className} onClick={selectLesson(lesson_num)}>
             Lesson {lesson}
           </p>
@@ -98,6 +101,21 @@ function App() {
       </div>
     )
   }
+
+  useKeyPress((event) => {
+    if (event.type !== "keydown") return false
+    if (PauseKeys.includes(event.key)) {
+      if (audioRef.current?.paused) audioRef.current?.play()
+      else audioRef.current?.pause()
+    }
+
+    if (audioRef.current) {
+      if (SkipLeftKeys.includes(event.key)) audioRef.current.currentTime -= 5
+      if (SkipRightKeys.includes(event.key)) audioRef.current.currentTime += 5
+    }
+
+    return true
+  })
 
   return (
     <div className="App">

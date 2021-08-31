@@ -52,7 +52,7 @@ export function Text(props: TextProps) {
       <div className="table">
         {text?.map((row) => {
           return (
-            <div className="row">
+            <div key={row[1]} className="row">
               <p className="cell dialog-head">{row[0]}</p>
               <p className="cell">{row[1]}</p>
             </div>
