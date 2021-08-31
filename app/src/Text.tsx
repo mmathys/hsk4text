@@ -21,11 +21,11 @@ export function Text(props: TextProps) {
 
   const splitFirst = (x: string) => {
     const arr = x.split("：");
-    if (arr.length === 1) return ["", arr[0]];
+    if (arr.length === 1) return ["", arr[0].trim()];
     else {
       const prefix = arr[0] + "：";
       const rest = arr.slice(1).reduce((p, c) => p + "：" + c);
-      return [prefix, rest];
+      return [prefix.trim(), rest.trim()];
     }
   };
 
