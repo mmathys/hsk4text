@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://max.ax/hsk4text/build/static/css/main.2e7ec9bf.chunk.css",
-    "main.js": "https://max.ax/hsk4text/build/static/js/main.d6161bbd.chunk.js",
-    "main.js.map": "https://max.ax/hsk4text/build/static/js/main.d6161bbd.chunk.js.map",
-    "runtime-main.js": "https://max.ax/hsk4text/build/static/js/runtime-main.b0af4ae4.js",
-    "runtime-main.js.map": "https://max.ax/hsk4text/build/static/js/runtime-main.b0af4ae4.js.map",
-    "static/js/2.74cb7b16.chunk.js": "https://max.ax/hsk4text/build/static/js/2.74cb7b16.chunk.js",
-    "static/js/2.74cb7b16.chunk.js.map": "https://max.ax/hsk4text/build/static/js/2.74cb7b16.chunk.js.map",
-    "static/js/3.4ec4e4db.chunk.js": "https://max.ax/hsk4text/build/static/js/3.4ec4e4db.chunk.js",
-    "static/js/3.4ec4e4db.chunk.js.map": "https://max.ax/hsk4text/build/static/js/3.4ec4e4db.chunk.js.map",
-    "index.html": "https://max.ax/hsk4text/build/index.html",
-    "static/css/main.2e7ec9bf.chunk.css.map": "https://max.ax/hsk4text/build/static/css/main.2e7ec9bf.chunk.css.map",
-    "static/js/2.74cb7b16.chunk.js.LICENSE.txt": "https://max.ax/hsk4text/build/static/js/2.74cb7b16.chunk.js.LICENSE.txt"
+    "main.css": "/hsk4text/build/static/css/main.2e7ec9bf.chunk.css",
+    "main.js": "/hsk4text/build/static/js/main.d83959bb.chunk.js",
+    "main.js.map": "/hsk4text/build/static/js/main.d83959bb.chunk.js.map",
+    "runtime-main.js": "/hsk4text/build/static/js/runtime-main.01b0990a.js",
+    "runtime-main.js.map": "/hsk4text/build/static/js/runtime-main.01b0990a.js.map",
+    "static/js/2.50872707.chunk.js": "/hsk4text/build/static/js/2.50872707.chunk.js",
+    "static/js/2.50872707.chunk.js.map": "/hsk4text/build/static/js/2.50872707.chunk.js.map",
+    "static/js/3.4ec4e4db.chunk.js": "/hsk4text/build/static/js/3.4ec4e4db.chunk.js",
+    "static/js/3.4ec4e4db.chunk.js.map": "/hsk4text/build/static/js/3.4ec4e4db.chunk.js.map",
+    "index.html": "/hsk4text/build/index.html",
+    "static/css/main.2e7ec9bf.chunk.css.map": "/hsk4text/build/static/css/main.2e7ec9bf.chunk.css.map",
+    "static/js/2.50872707.chunk.js.LICENSE.txt": "/hsk4text/build/static/js/2.50872707.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b0af4ae4.js",
-    "static/js/2.74cb7b16.chunk.js",
+    "static/js/runtime-main.01b0990a.js",
+    "static/js/2.50872707.chunk.js",
     "static/css/main.2e7ec9bf.chunk.css",
-    "static/js/main.d6161bbd.chunk.js"
+    "static/js/main.d83959bb.chunk.js"
   ]
 }
