@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "PUBLIC_URL=https://max.ax/hsk4text/build react-scripts build",
+    "build": "PUBLIC_URL=/hsk4text/build react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
