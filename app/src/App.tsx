@@ -4,9 +4,9 @@ import "./App.css"
 import { Text } from "./Text"
 import _ from "lodash"
 
-const PauseKeys = ["k", "space"]
-const SkipLeftKeys = ["j", "left"]
-const SkipRightKeys = ["l", "right"]
+const PauseKeys = ["k", " "]
+const SkipLeftKeys = ["j", "ArrowLeft"]
+const SkipRightKeys = ["l", "ArrowRight"]
 
 export type TextConfig = {
   lesson: number
@@ -107,11 +107,13 @@ function App() {
     if (PauseKeys.includes(event.key)) {
       if (audioRef.current?.paused) audioRef.current?.play()
       else audioRef.current?.pause()
+      event.preventDefault()
     }
 
     if (audioRef.current) {
       if (SkipLeftKeys.includes(event.key)) audioRef.current.currentTime -= 5
       if (SkipRightKeys.includes(event.key)) audioRef.current.currentTime += 5
+      event.preventDefault()
     }
 
     return true
