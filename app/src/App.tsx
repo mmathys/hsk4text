@@ -137,19 +137,19 @@ function App() {
     const lesson = activeText && config.texts.indexOf(activeText)
 
     let newText
-    if (down) {
-      if (lesson !== undefined) {
-        newText = config.texts[lesson + 1]
-      } else {
-        newText = config.texts[0]
-      }
-    }
-
     if (up) {
       if (lesson !== undefined) {
         newText = config.texts[lesson - 1]
       } else {
         newText = config.texts[numLessons - 1]
+      }
+    }
+
+    if (down) {
+      if (lesson !== undefined) {
+        newText = config.texts[lesson + 1]
+      } else {
+        newText = config.texts[0]
       }
     }
 
